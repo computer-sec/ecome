@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
 	<title><?php echo $title; ?></title>
@@ -37,6 +38,43 @@
 	<!--===============================================================================================-->
 </head>
 
+=======
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="<?php echo base_url('assets/');?>images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>fonts/elegant-font/html-css/style.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>vendor/lightbox2/css/lightbox.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>css/main.css">
+<!--===============================================================================================-->
+</head>
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 <body class="animsition">
 
 	<!-- Header -->
@@ -55,11 +93,20 @@
 			</div>
 
 			<div class="wrap_header">
+<<<<<<< HEAD
+=======
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<img src="<?php echo base_url('assets/');?>images/icons/logo.png" alt="IMG-LOGO">
+				</a>
+
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 				<!-- Menu -->
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
+<<<<<<< HEAD
 								<a href="<?php echo base_url('home'); ?>">Beranda</a>
 
 							</li>
@@ -74,6 +121,39 @@
 
 							<li>
 								<a href="<?php echo base_url('home/about'); ?>">Tentang</a>
+=======
+								<a href="<?php echo base_url('home');?>">Home</a>
+
+							</li>
+
+							<li class="">
+								<a href="product.html">Shop</a>
+																<ul class="sub_menu">
+									<li><a href="index.html">Homepage V1</a></li>
+									<li><a href="home-02.html">Homepage V2</a></li>
+									<li><a href="home-03.html">Homepage V3</a></li>
+								</ul>
+							</li>
+
+							<li class="sale-noti">
+								<a href="product.html">Sale</a>
+							</li>
+
+							<li>
+								<a href="cart.html">Features</a>
+							</li>
+
+							<li>
+								<a href="blog.html">Blog</a>
+							</li>
+
+							<li>
+								<a href="<?php echo base_url('home/about');?>">About</a>
+							</li>
+
+							<li>
+								<a href="<?php echo base_url('home/contact');?>">Contact</a>
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 							</li>
 						</ul>
 					</nav>
@@ -86,7 +166,11 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
+<<<<<<< HEAD
 				<img src="<?php echo base_url('assets/'); ?>images/icons/logo.png" alt="IMG-LOGO">
+=======
+				<img src="<?php echo base_url('assets/');?>images/icons/logo.png" alt="IMG-LOGO">
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 			</a>
 
 			<!-- Button show menu -->
@@ -100,7 +184,11 @@
 			</div>
 		</div>
 		<!-- Menu Mobile -->
+<<<<<<< HEAD
 		<div class="wrap-side-menu">
+=======
+		<div class="wrap-side-menu" >
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 			<nav class="side-menu">
 				<ul class="main-menu">
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
@@ -135,7 +223,11 @@
 					</li>
 
 					<li class="item-menu-mobile">
+<<<<<<< HEAD
 						<a href="<?php echo base_url('home'); ?>">Home</a>
+=======
+						<a href="<?php echo base_url('home');?>">Home</a>
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 						<ul class="sub-menu">
 							<li><a href="index.html">Homepage V1</a></li>
 							<li><a href="home-02.html">Homepage V2</a></li>
@@ -161,11 +253,19 @@
 					</li>
 
 					<li class="item-menu-mobile">
+<<<<<<< HEAD
 						<a href="<?php echo base_url('home/about'); ?>">About</a>
 					</li>
 
 					<li class="item-menu-mobile">
 						<a href="<?php echo base_url('home/contact'); ?>">Contact</a>
+=======
+						<a href="<?php echo base_url('home/about');?>">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="<?php echo base_url('home/contact');?>">Contact</a>
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 					</li>
 				</ul>
 			</nav>

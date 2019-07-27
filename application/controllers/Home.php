@@ -3,7 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
-
 	/**
 	 * Index Page for this controller.
 	 *
@@ -27,15 +26,6 @@ class Home extends CI_Controller
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/konten', $data);
-		$this->load->view('templates/footer');
-	}
-
-	public function about()
-	{
-		$data['title'] = "";
-		$data['active'] = "";
-		$this->load->view('templates/header');
-		$this->load->view('templates/about');
 		$this->load->view('templates/footer');
 	}
 
@@ -63,6 +53,13 @@ class Home extends CI_Controller
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/produk');
+	}
+	public function contact()
+	{
+		$data['title'] = "";
+		$data['active'] = "";
+		$this->load->view('templates/header');
+		$this->load->view('templates/contact');
 		$this->load->view('templates/footer');
 	}
 }

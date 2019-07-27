@@ -70,7 +70,11 @@
 
 							<li>
 								<a href="product.html">Shop</a>
+<<<<<<< HEAD
 								<ul class="sub_menu">
+=======
+																<ul class="sub_menu">
+>>>>>>> 13fcb7131390a0090e68a755ad16f61dff842403
 									<li><a href="index.html">Homepage V1</a></li>
 									<li><a href="home-02.html">Homepage V2</a></li>
 									<li><a href="home-03.html">Homepage V3</a></li>

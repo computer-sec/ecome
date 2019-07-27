@@ -18,4 +18,10 @@ class Product extends CI_Controller
         $this->load->view('templates/produk', $data);
         $this->load->view('templates/footer');
     }
+
+    //product
+    public function product(){
+        $data['datas'] = $this->Mod_Product->getAll();
+        $this->load->view('templates/produk',$data);
+    }
 }
