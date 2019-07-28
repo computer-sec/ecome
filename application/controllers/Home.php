@@ -19,12 +19,20 @@ class Home extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Mod_Product');
+	}
+
 	public function index()
 	{
+		$data['produk'] = $this->Mod_Product->getAll();
 		$data['title'] = "Home";
-		$data['active'] = "home";
+		$data['active'] = "";
 		$this->load->view('templates/header', $data);
-		$this->load->view('templates/konten');
+		$this->load->view('templates/konten', $data);
 		$this->load->view('templates/footer');
 	}
 
