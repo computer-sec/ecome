@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,18 +21,16 @@ class Home extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->model('Mod_Product');
-		$data['title'] = "home";
-		$data['produk'] = $this->Mod_Product->getAll();
-		$data['active'] = "";
+		$data['title'] = "Home";
+		$data['active'] = "home";
 		$this->load->view('templates/header', $data);
-		$this->load->view('templates/konten', $data);
+		$this->load->view('templates/konten');
 		$this->load->view('templates/footer');
 	}
 
 	public function blog()
 	{
-		$data['title'] = 'Blog';
+		$data['title'] = "Blog";
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/blog');
@@ -40,26 +39,19 @@ class Home extends CI_Controller
 
 	public function post()
 	{
-		$data['title'] = 'Post';
+		$data['title'] = "Blog";
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/post');
 		$this->load->view('templates/footer');
 	}
 
-	public function produk()
+	public function tentang()
 	{
-		$data['title'] = 'Produk';
+		$data['title'] = "Tentang";
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
-		$this->load->view('templates/produk');
-	}
-	public function contact()
-	{
-		$data['title'] = "";
-		$data['active'] = "";
-		$this->load->view('templates/header');
-		$this->load->view('templates/contact');
+		$this->load->view('templates/tentang');
 		$this->load->view('templates/footer');
 	}
 }
