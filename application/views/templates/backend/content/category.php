@@ -87,7 +87,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="editModal">Update Kategori Product</h5>
+                                                            <h5 class="modal-title" id="editModal">Update Kategori Produk</h5>
                                                             <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
@@ -99,18 +99,18 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 echo form_open('dashboard/editCategory/'.$key->id_category);?>
 
                                                                 <div class="form-group">
-                                                                    <label>Nama kategori</label>
-                                                                    <input type="text" name="categoryname" placeholder="Category" value="<?php echo $key->categoryname;?>" required class="form-control">
+                                                                    <label>Nama Kategori</label>
+                                                                    <input type="text" name="categoryname" placeholder="Nama Kategori" value="<?php echo $key->categoryname;?>" required class="form-control">
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label>Keterangan</label>
-                                                                    <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo $key->description?></textarea>
+                                                                    <label>Deskripsi</label>
+                                                                    <textarea name="keterangan" class="form-control" placeholder="Deskripsi"><?php echo $key->description?></textarea>
                                                                 </div>
 
                                                                 <div class="form-group">
                                                                     <div class="modal-footer">
-                                                                        <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Save changes</button>
+                                                                        <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Simpan Perubahan</button>
                                                                     </div>
                                                                     <?php echo form_close() ?>
                                                                 </div>
@@ -141,7 +141,7 @@ echo form_open('dashboard/editCategory/'.$key->id_category);?>
 
                                                             <a href="<?php echo base_url('dashboard/deleteCategory/'.$key->id_category) ?>" class="btn btn-danger"><i class="zmdi zmdi-delete"></i> Ya, Hapus</a>
 
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                                                         </div>
                                                     </div>
                                                 </div>
