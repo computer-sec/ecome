@@ -39,8 +39,8 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>Keterangan</label>
-                                                    <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo set_value('description') ?></textarea>
+                                                    <label>Deskripsi</label>
+                                                    <textarea name="deskripsi" class="form-control" placeholder="Deskripsi"><?php echo set_value('description') ?></textarea>
                                                 </div>
 
                                                 <div class="form-group">
@@ -74,8 +74,8 @@
                                             <th>Name</th>
                                             <th>Foto</th>
                                             <th>Harga</th>
-                                            <th>Keterangan</th>
-                                            <th>Action</th>
+                                            <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
