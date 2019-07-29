@@ -122,6 +122,23 @@
                         <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Blog</a>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Videos</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-gears"></i>General Setting</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="<?php echo base_url('dashboard/aboutCompany')?>">About</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
