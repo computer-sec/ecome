@@ -79,7 +79,7 @@
                             <tr>
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $dt->name; ?></td>
-                                <td><img src="<?php echo base_url('assets/upload/thumbs/' . $dt->image) ?>" class="img img-responsive" width="60">
+                                <td><img src="<?php echo base_url('assets/upload/image/' . $dt->image) ?>" class="img img-responsive" width="60">
                                 </td>
                                 <td><?php echo $dt->Description; ?></td>
                                 <td>

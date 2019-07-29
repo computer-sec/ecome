@@ -92,7 +92,7 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $key->name; ?></td>
-                                                <td><img src="<?php echo base_url('assets/upload/thumbs/' . $key->image) ?>" class="img img-responsive" width="60">
+                                                <td><img src="<?php echo base_url('assets/upload/image/' . $key->image) ?>" class="img img-responsive" width="60">
                                                 </td>
                                                 <td><?php echo $key->price; ?></td>
                                                 <td><?php echo $key->keterangan; ?></td>
