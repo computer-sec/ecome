@@ -77,8 +77,13 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
+	'password' => 'rizaru',
+	'database' => 'db_ecome',
+=======
 	'password' => '',
 	'database' => 'db_store342',
+>>>>>>> a105ff18045d8b0a5cc6b9a5b4cef6ef0e12db76
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
