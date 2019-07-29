@@ -67,7 +67,7 @@
 							</li>
 
 							<li class="sale-noti">
-								<a href="<?php echo base_url('Produk'); ?>">Produk</a>
+								<a href="<?php echo base_url('produk'); ?>">Produk</a>
 							</li>
 
 							<li>

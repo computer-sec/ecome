@@ -124,10 +124,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Gallery</a>
-                        </li>
-                        <li>
                             <a href="form.html">
                                 <i class="far fa-check-square"></i>Videos</a>
                         </li>
