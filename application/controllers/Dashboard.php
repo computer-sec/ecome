@@ -73,7 +73,6 @@ class Dashboard extends CI_Controller {
                         			  'name' => $this->input->post('name'),
                         			  'keterangan' => $this->input->post('keterangan'),
                         			  'price' => $this->input->post('price'),
-                        			  'stock' => $this->input->post('stock'),
                         			  'image' => $nmgambar,
                         			  'id_category' => $this->input->post('id_category')
 
@@ -152,7 +151,7 @@ class Dashboard extends CI_Controller {
 
 	public function addCategory(){
 		$data = array('categoryname' => $this->input->post('categoryname', TRUE),
-					  'description' => $this->input->post('keterangan', TRUE)
+					  'description' => $this->input->post('description', TRUE)
 					) ;
 		$this->Mod_category->addData($data);
 		$this->session->set_flashdata('sukses','Kategori berita telah ditambah');
