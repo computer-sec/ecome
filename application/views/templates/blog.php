@@ -42,7 +42,7 @@
                         <a href="<?php echo base_url('home/post'); ?>" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on January 1, 2017 by <a href="#">Start Bootstrap</a>
+                        Posted on January 2, 2017 by <a href="#">Start Bootstrap</a>
                     </div>
                 </div>
 
