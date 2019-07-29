@@ -18,7 +18,9 @@ class Mod_Blog extends CI_Model
 	}
 
 	public function getByID()
-	{ }
+	{ 
+
+	}
 
 	public function delete($id_blog, $data)
 	{
