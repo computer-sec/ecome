@@ -21,7 +21,9 @@ class Mod_Product extends CI_Model
 	}
 
 	public function getByID()
-	{ }
+	{ 
+
+	}
 
 	public function delete($id_product, $data)
 	{

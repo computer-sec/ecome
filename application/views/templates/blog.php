@@ -22,7 +22,7 @@
                 <?php endforeach; ?>
                 <!-- Pagination -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col ">
                         <!--Tampilkan pagination-->
                         <?php echo $pagination; ?>
                         <br>

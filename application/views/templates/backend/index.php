@@ -120,8 +120,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="table.html">
-                                <i class="fa fa-newspaper-o"></i>Blog</a>
+                            <a href="<?php echo base_url('dashboard/blog');?>">
+                            <i class="fas fa-newspaper-o"></i>Blog</a>
                         </li>
                     </ul>
                 </nav>

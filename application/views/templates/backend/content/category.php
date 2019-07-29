@@ -30,7 +30,7 @@
 
                                         <div class="form-group">
                                             <label>Deskripsi</label>
-                                            <textarea name="deskripsi" class="form-control" placeholder="Deskripsi"><?php echo set_value('description') ?></textarea>
+                                            <textarea name="description" class="form-control" placeholder="Deskripsi"><?php echo set_value('description') ?></textarea>
                                         </div>
 
                                         <div class="form-group">

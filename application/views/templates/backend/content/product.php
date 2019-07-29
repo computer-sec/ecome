@@ -27,6 +27,14 @@
                                                     <label>Nama Product</label>
                                                     <input type="text" name="name" placeholder="Product" value="<?php echo set_value('name') ?>" required class="form-control">
                                                 </div>
+                                                <div class="form-group">
+                                                    <label>Category Product</label>
+                                                    <select name="id_category" class="form-control">
+                                                        <?php foreach ($kategori->result() as $hm) { ?>
+                                                            <option value="<?php echo $hm->id_category; ?>"><?php echo $hm->categoryname; ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                </div>
 
                                                 <div class="form-group">
                                                     <label>Gambar Produk</label>
@@ -40,7 +48,7 @@
 
                                                 <div class="form-group">
                                                     <label>Deskripsi</label>
-                                                    <textarea name="deskripsi" class="form-control" placeholder="Deskripsi"><?php echo set_value('description') ?></textarea>
+                                                    <textarea name="keterangan" class="form-control" placeholder="Deskripsi"><?php echo set_value('keterangan') ?></textarea>
                                                 </div>
 
                                                 <div class="form-group">
@@ -84,7 +92,7 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $key->name; ?></td>
-                                                <td><img src="<?php echo base_url('assets/upload/thumbs/' . $key->image) ?>" class="img img-responsive" width="60">
+                                                <td><img src="<?php echo base_url('assets/upload/image/' . $key->image) ?>" class="img img-responsive" width="60">
                                                 </td>
                                                 <td><?php echo $key->price; ?></td>
                                                 <td><?php echo $key->keterangan; ?></td>
