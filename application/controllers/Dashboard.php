@@ -9,6 +9,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model('Mod_login');
 		$this->load->model('Mod_category');
 		$this->load->model('Mod_Product');
+		$this->load->model('Mod_Blog');
 		if ($this->session->userdata('status') != 'login'){
 			redirect('login','refresh');
 			exit;
@@ -150,7 +151,7 @@ class Dashboard extends CI_Controller {
 
 	public function addCategory(){
 		$data = array('categoryname' => $this->input->post('categoryname', TRUE),
-					  'description' => $this->input->post('keterangan', TRUE)
+					  'description' => $this->input->post('description', TRUE)
 					) ;
 		$this->Mod_category->addData($data);
 		$this->session->set_flashdata('sukses','Kategori berita telah ditambah');
@@ -178,13 +179,109 @@ class Dashboard extends CI_Controller {
 	}
 
 
-
-	public function aboutCompany(){
-		$this->load->model('Mod_company');
-		$data['datas'] = $this->Mod_company->getAll();
-		$data['content'] = "templates/backend/content/setting";
+	// Controller Blog
+	public function blog(){
+		$data['datas'] = $this->Mod_Blog->getAll();
+		$data['title'] = "blog";
+		$data['content'] = "templates/backend/content/blog";
 		$this->load->view('templates/backend/index',$data);
 	}
+
+	public function addBlog(){
+		$nmgambar ='';
+				$config['upload_path']          = './assets/upload/image/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 12000;
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+
+                $this->upload->initialize($config);
+
+                if ( ! $this->upload->do_upload('image'))
+                {
+ 					var_dump($this->upload->display_errors()." ".$config['upload_path']);
+					exit;
+                }
+                else
+                {
+                        $upload_data = array('uploads' => $this->upload->data());
+                        $configs['image_library']	= 'gd2';
+						$configs['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name'];
+						$configs['new_image'] 		= './assets/upload/thumbs/';
+						$configs['create_thumb'] 	= TRUE;
+						$configs['quality'] 		= "100%";
+						$configs['maintain_ratio'] 	= TRUE;
+						$configs['width'] 			= 375; // Pixel
+						$configs['height'] 			= 255; // Pixel
+						$configs['x_axis'] 			= 0;
+						$configs['y_axis'] 			= 0;
+						$configs['thumb_marker'] 	= '';
+						$this->load->library('image_lib', $configs);
+						$this->image_lib->resize();
+						$nmgambar = $upload_data['uploads']['file_name'];
+
+                        $data = array('id_blog' => $this->input->post('id_blog'),
+                        			  'name' => $this->input->post('name'),
+                        			  'Description' => $this->input->post('Description'),
+                        			  'image' => $nmgambar,
+                    );
+                        $this->Mod_Blog->addBlog($data);
+                        redirect(base_url('dashboard/blog'));
+                        exit;
+                }
+        }
+
+    public function editProgram($id_blog){
+				$nmgambar ='';
+				$config['upload_path']          = './assets/upload/image/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 12000;
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+
+                $this->upload->initialize($config);
+
+                if ( ! $this->upload->do_upload('image'))
+                {
+ 					var_dump($this->upload->display_errors()." ".$config['upload_path']);
+					exit;
+                }
+                else
+                {
+                        $upload_data = array('uploads' => $this->upload->data());
+                        $configs['image_library']	= 'gd2';
+						$configs['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name'];
+						$configs['new_image'] 		= './assets/upload/thumbs/';
+						$configs['create_thumb'] 	= TRUE;
+						$configs['quality'] 		= "100%";
+						$configs['maintain_ratio'] 	= TRUE;
+						$configs['width'] 			= 375; // Pixel
+						$configs['height'] 			= 255; // Pixel
+						$configs['x_axis'] 			= 0;
+						$configs['y_axis'] 			= 0;
+						$configs['thumb_marker'] 	= '';
+						$this->load->library('image_lib', $configs);
+						$this->image_lib->resize();
+						$nmgambar = $upload_data['uploads']['file_name'];
+
+                        $data = array('id_blog' => $this->input->post('id_blog'),
+                        			  'name' => $this->input->post('name'),
+                        			  'Description' => $this->input->post('Description'),
+                        			  'image' => $nmgambar,
+                    );
+                        $this->Mod_Blog->update($id_blog,$data);
+                        redirect(base_url('dashboard/blog'));
+                        exit;
+                }
+	}  
+
+	public function deleteProgram($id_blog){
+		$data = array('id_blog' => $id_blog);
+		$this->Mod_Blog->delete($id_blog,$data);
+		$this->session->set_flashdata('delete','Kategori berita telah didelete');
+		redirect(base_url('dashboard/blog'));
+		exit;
+	}      
 
 	public function debug(){
 
@@ -192,14 +289,6 @@ class Dashboard extends CI_Controller {
 
 	public function cekBarang(){
 
-	}
-
-	public function Videos(){
-
-	}
-
-	public function gallery(){
-		
 	}
 
 	public function logout(){
