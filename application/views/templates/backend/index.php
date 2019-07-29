@@ -114,7 +114,7 @@
                                     <a href="<?php echo base_url('dashboard/dataProduct');?>">Data Produk</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url('dashboard/category');?>">Kategori</a>
+                                    <a href="<?php echo base_url('dashboard/category');?>">Kategori Produk</a>
                                 </li>
                                
                             </ul>

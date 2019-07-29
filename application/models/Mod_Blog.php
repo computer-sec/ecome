@@ -20,15 +20,15 @@ class Mod_Blog extends CI_Model
 	public function getByID()
 	{ }
 
-	public function delete($id_product, $data)
+	public function delete($id_blog, $data)
 	{
-		$this->db->where('id_product', $id_product);
-		$this->db->delete('tbl_product', $data);
+		$this->db->where('id_blog', $id_blog);
+		$this->db->delete('tbl_blog', $data);
 	}
 
-	public function update($id_product, $data)
+	public function update($id_blog, $data)
 	{
-		$this->db->where('id_product', $id_product);
-		$this->db->update('tbl_product', $data);
+		$this->db->where('id_blog', $id_blog);
+		$this->db->update('tbl_blog', $data);
 	}
 }
