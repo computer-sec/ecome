@@ -195,12 +195,11 @@ class Dashboard extends CI_Controller {
 
 	}
 
-	public function Videos(){
-
-	}
-
-	public function gallery(){
-		
+	public function blog(){
+		$data['datas'] = $this->Mod_category->getAll();
+		$data['title'] = "category";
+		$data['content'] = "templates/backend/content/blog";
+		$this->load->view('templates/backend/index',$data);
 	}
 
 	public function logout(){

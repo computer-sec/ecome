@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="overview-wrap">
-                                <h2 class="title-1"><?php echo $title; ?></h2>
+                                <h2 class="title-1">Produk Barang</h2>
                                 <button class="au-btn au-btn-icon au-btn--blue" data-toggle="modal" data-target="#myModal">
                                     <i class="zmdi zmdi-plus"></i>Tambahkan Barang
                                 </button>
@@ -12,7 +12,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="myModalLabel">Tambah Product</h5>
+                                                <h5 class="modal-title" id="myModalLabel">Tambah Produk</h5>
                                                 <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
@@ -29,8 +29,8 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>Keterangan</label>
-                                                    <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo set_value('description') ?></textarea>
+                                                    <label>Gambar Produk</label>
+                                                    <input type="file" name="image" accept="image/*" required class="form-control">
                                                 </div>
 
                                                 <div class="form-group">
@@ -39,10 +39,9 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>Gambar Produk</label>
-                                                    <input type="file" name="image" accept="image/*" required class="form-control">
+                                                    <label>Keterangan</label>
+                                                    <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo set_value('description') ?></textarea>
                                                 </div>
-
 
                                                 <div class="form-group">
                                                     <div class="modal-footer">
@@ -51,7 +50,7 @@
                                                     <?php echo form_close() ?>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kembali</button>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -71,7 +70,7 @@
                                 <table class="table table-borderless table-data3">
                                     <thead>
                                         <tr>
-                                            <th>#No.Produk</th>
+                                            <th>#No</th>
                                             <th>Name</th>
                                             <th>Foto</th>
                                             <th>Harga</th>
@@ -85,11 +84,11 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $key->name; ?></td>
-                                                <td><?php echo $key->keterangan; ?></td>
+                                                <td><img src="<?php echo base_url('assets/upload/thumbs/' . $key->image) ?>" class="img img-responsive" width="60">
+                                                </td>
                                                 <td><?php echo $key->price; ?></td>
-                                                <td><?php echo $key->stock; ?></td>
-                                                <td><img src="<?php echo base_url('assets/upload/thumbs/' . $key->image) ?>" class="img img-responsive" width="60"></td>
-                                                <td><?php echo $key->categoryname; ?></td>
+                                                <td><?php echo $key->keterangan; ?></td>
+                                                
 
                                                 <td>
                                                     <div class="table-data-feature">

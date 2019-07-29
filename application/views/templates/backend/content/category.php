@@ -4,24 +4,24 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="overview-wrap">
-                    <h2 class="title-1"><?php echo $title;?></h2>
+                    <h2 class="title-1">Kategori Produk</h2>
                     <button class="au-btn au-btn-icon au-btn--blue" data-toggle="modal" data-target="#myModal">
-                        <i class="zmdi zmdi-plus"></i>add item
+                        <i class="zmdi zmdi-plus"></i>Tambahkan Barang
                     </button>
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="myModalLabel">Tambah Kategori Product</h5>
+                                    <h5 class="modal-title" id="myModalLabel">Tambah Kategori Produk</h5>
                                     <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <?php
-// Validasi
-echo validation_errors('<div class="alert alert-success">','</div>');
-// Form
-echo form_open('dashboard/addCategory');?>
+                                    // Validasi
+                                    echo validation_errors('<div class="alert alert-success">','</div>');
+                                    // Form
+                                    echo form_open('dashboard/addCategory');?>
 
                                         <div class="form-group">
                                             <label>Nama kategori</label>
@@ -37,12 +37,12 @@ echo form_open('dashboard/addCategory');?>
 
                                         <div class="form-group">
                                             <div class="modal-footer">
-                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Save changes</button>
+                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Simpan Perubahan</button>
                                             </div>
                                             <?php echo form_close() ?>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                         </div>
                                 </div>
                             </div>
