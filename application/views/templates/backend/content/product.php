@@ -6,7 +6,7 @@
                             <div class="overview-wrap">
                                 <h2 class="title-1"><?php echo $title; ?></h2>
                                 <button class="au-btn au-btn-icon au-btn--blue" data-toggle="modal" data-target="#myModal">
-                                    <i class="zmdi zmdi-plus"></i>add item
+                                    <i class="zmdi zmdi-plus"></i>Tambahkan Barang
                                 </button>
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -27,41 +27,31 @@
                                                     <label>Nama Product</label>
                                                     <input type="text" name="name" placeholder="Product" value="<?php echo set_value('name') ?>" required class="form-control">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Category Product</label>
-                                                    <select name="id_category" class="form-control">
-                                                        <?php foreach ($kategori->result() as $hm) { ?>
-                                                            <option value="<?php echo $hm->id_category; ?>"><?php echo $hm->categoryname; ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
 
                                                 <div class="form-group">
                                                     <label>Keterangan</label>
                                                     <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo set_value('description') ?></textarea>
                                                 </div>
+
                                                 <div class="form-group">
-                                                    <label>Price Product</label>
+                                                    <label>Harga Barang</label>
                                                     <input type="number" name="price" placeholder="Price Product" value="<?php echo set_value('price') ?>" required class="form-control">
                                                 </div>
+
                                                 <div class="form-group">
-                                                    <label>Stock Product</label>
-                                                    <input type="number" name="stock" placeholder="Stock Product" value="<?php echo set_value('stock') ?>" required class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Image Product</label>
+                                                    <label>Gambar Produk</label>
                                                     <input type="file" name="image" accept="image/*" required class="form-control">
                                                 </div>
 
 
                                                 <div class="form-group">
                                                     <div class="modal-footer">
-                                                        <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Save changes</button>
+                                                        <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Simpan Produk</button>
                                                     </div>
                                                     <?php echo form_close() ?>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kembali</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,13 +71,11 @@
                                 <table class="table table-borderless table-data3">
                                     <thead>
                                         <tr>
-                                            <th>#No</th>
+                                            <th>#No.Produk</th>
                                             <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Price</th>
-                                            <th>Stock</th>
-                                            <th>Image</th>
-                                            <th>Category</th>
+                                            <th>Foto</th>
+                                            <th>Harga</th>
+                                            <th>Keterangan</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>

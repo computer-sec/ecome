@@ -71,7 +71,7 @@
 							</li>
 
 							<li>
-								<a href="<?php echo base_url('home/blog'); ?>">Blog</a>
+								<a href="<?php echo base_url('Blog'); ?>">Blog</a>
 							</li>
 
 							<li>
