@@ -108,10 +108,10 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Deskripsi Program</label>
-                                                            <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo $dt->Description ?></textarea>
+                                                            <textarea name="Description" class="form-control" placeholder="Keterangan"><?php echo $dt->Description ?></textarea>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label>Image Product</label>
+                                                            <label>Gambar</label>
                                                             <input type="file" name="image" accept="image/*" required class="form-control">
                                                         </div>
 
@@ -141,7 +141,7 @@
                                                     </div>
                                                     <div class="modal-body">
 
-                                                        <p class="alert alert-success">Yakin ingin menghapus Product ini?</p>
+                                                        <p class="alert alert-success">Yakin ingin menghapus Program ini?</p>
 
                                                     </div>
                                                     <div class="modal-footer">
