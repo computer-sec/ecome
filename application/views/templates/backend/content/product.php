@@ -24,11 +24,11 @@
                                                 echo form_open_multipart('dashboard/addProduct'); ?>
 
                                                 <div class="form-group">
-                                                    <label>Nama Product</label>
-                                                    <input type="text" name="name" placeholder="Product" value="<?php echo set_value('name') ?>" required class="form-control">
+                                                    <label>Nama Produk</label>
+                                                    <input type="text" name="name" placeholder="Nama Produk" value="<?php echo set_value('name') ?>" required class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Category Product</label>
+                                                    <label>Category Produk</label>
                                                     <select name="id_category" class="form-control">
                                                         <?php foreach ($kategori->result() as $hm) { ?>
                                                             <option value="<?php echo $hm->id_category; ?>"><?php echo $hm->categoryname; ?></option>
@@ -43,7 +43,7 @@
 
                                                 <div class="form-group">
                                                     <label>Harga Barang</label>
-                                                    <input type="number" name="price" placeholder="Price Product" value="<?php echo set_value('price') ?>" required class="form-control">
+                                                    <input type="number" name="price" placeholder="Harga Produk" value="<?php echo set_value('price') ?>" required class="form-control">
                                                 </div>
 
                                                 <div class="form-group">
@@ -107,7 +107,7 @@
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title" id="editModal">Update Product</h5>
+                                                                        <h5 class="modal-title" id="editModal">Update Produk</h5>
                                                                         <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span>
                                                                         </button>
                                                                     </div>
@@ -119,40 +119,36 @@
                                                                         echo form_open_multipart('dashboard/editProduct/' . $key->id_product); ?>
 
                                                                         <div class="form-group">
-                                                                            <label>Nama Product</label>
-                                                                            <input type="text" name="name" placeholder="Category" value="<?php echo $key->name; ?>" required class="form-control">
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Keterangan</label>
-                                                                            <textarea name="keterangan" class="form-control" placeholder="Keterangan"><?php echo $key->keterangan ?></textarea>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Price Product</label>
-                                                                            <input type="number" name="price" placeholder="Price" value="<?php echo $key->price; ?>" required class="form-control">
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Stock Product</label>
-                                                                            <input type="number" name="stock" placeholder="Stock" value="<?php echo $key->stock; ?>" required class="form-control">
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Image Product</label>
-                                                                            <input type="file" name="image" accept="image/*" required class="form-control">
+                                                                            <label>Nama Produk</label>
+                                                                            <input type="text" name="name" placeholder="Nama Produk" value="<?php echo $key->name; ?>" required class="form-control">
                                                                         </div>
 
-
-
                                                                         <div class="form-group">
-                                                                            <label>Category Product</label>
+                                                                            <label>Category Produk</label>
                                                                             <select name="id_category" class="form-control">
-                                                                                <?php foreach ($kategori->result() as $kh) { ?>
-                                                                                    <option value="<?php echo $kh->id_category; ?>"><?php echo $kh->categoryname; ?></option>
+                                                                                <?php foreach ($kategori->result() as $hm) { ?>
+                                                                                    <option value="<?php echo $hm->id_category; ?>"><?php echo $hm->categoryname; ?></option>
                                                                                 <?php } ?>
                                                                             </select>
                                                                         </div>
 
                                                                         <div class="form-group">
+                                                                            <label>Deskripsi</label>
+                                                                            <textarea name="keterangan" class="form-control" placeholder="Deskripsi"><?php echo $key->keterangan ?></textarea>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label>Harga Produk</label>
+                                                                            <input type="number" name="price" placeholder="Harga Produk" value="<?php echo $key->price; ?>" required class="form-control">
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label>Gambar Produk</label>
+                                                                            <input type="file" name="image" accept="image/*" required class="form-control">
+                                                                        </div>
+
+                                                                        <div class="form-group">
                                                                             <div class="modal-footer">
-                                                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Save changes</button>
+                                                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Simpan Perubahan</button>
                                                                             </div>
                                                                             <?php echo form_close() ?>
                                                                         </div>

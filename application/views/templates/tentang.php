@@ -32,8 +32,13 @@
                     <span class="s-text7">
                         - Steve Job’s
                     </span>
-                </div>
+                </div>                
             </div>
+
+            <div class="col-md-8 p-b-30">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.516207867526!2d107.59892581431744!3d-6.9482700699518505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6279d52ed8b%3A0xfbc31838ba12ddbf!2sSekolah+Tinggi+Teknologi+Bandung!5e0!3m2!1sid!2sid!4v1564412023043!5m2!1sid!2sid" width="1200" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
         </div>
     </div>
 </section>
