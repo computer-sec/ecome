@@ -65,12 +65,7 @@
 		</div>
 		<div class="row">
 			<?php $no = 1;
-<<<<<<< HEAD
      			foreach ($batas->result() as $p) { ?>
-=======
-     			foreach ($produk->result() as $p) { ?>
-			
->>>>>>> 41cd577cb19af67b4c498b4c7ded1d32455a2c50
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 
 				<!-- block1 -->
@@ -80,11 +75,7 @@
 
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
-<<<<<<< HEAD
 						<a href="<?php echo base_url('Produk/item/'. $p->id_product); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-=======
-						<a href="<?php echo base_url('Produk/item'); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
->>>>>>> 41cd577cb19af67b4c498b4c7ded1d32455a2c50
 							<?php echo $p->name; ?>
 						</a>
 					</div>	
@@ -132,11 +123,15 @@
 								</div>
 							</div>
 						</div>
-						<div class="block2-txt p-t-20">
-							<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-								<?php echo $p->name; ?>
-							</a>
-						</div>
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									<?php echo $p->name; ?>
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									Rp. <?php echo $p->price; ?>
+								</span>
+							</div>
 					</div>
 				</div>
 			<?php } ?>

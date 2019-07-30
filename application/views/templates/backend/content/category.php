@@ -93,10 +93,10 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <?php
-// Validasi
-echo validation_errors('<div class="alert alert-success">','</div>');
-// Form
-echo form_open('dashboard/editCategory/'.$key->id_category);?>
+                                                        // Validasi
+                                                        echo validation_errors('<div class="alert alert-success">','</div>');
+                                                        // Form
+                                                        echo form_open('dashboard/editCategory/'.$key->id_category);?>
 
                                                                 <div class="form-group">
                                                                     <label>Nama Kategori</label>
@@ -115,7 +115,7 @@ echo form_open('dashboard/editCategory/'.$key->id_category);?>
                                                                     <?php echo form_close() ?>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                                                 </div>
                                                         </div>
                                                     </div>

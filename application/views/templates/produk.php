@@ -6,11 +6,11 @@
 				<div class="item-slick1 item1-slick1" style="background-image: url(<?php echo base_url('assets/upload/image/' . $p->image); ?>);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-							Women Collection 2018
+							Produk
 						</span>
 
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-							New arrivals
+							Kunyit
 						</h2>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
@@ -35,8 +35,8 @@
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="<?php echo base_url('Produk/item'); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Dresses
+							<a href="<?php echo base_url('Produk/item/'. $p->id_product); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								<?php echo $p->name; ?>
 							</a>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 									</a>
 
 									<span class="block2-price m-text6 p-r-5">
-										<?php echo $p->price; ?>
+										Rp. <?php echo $p->price; ?>
 									</span>
 								</div>
 							</div>

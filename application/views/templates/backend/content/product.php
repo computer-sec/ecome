@@ -153,7 +153,7 @@
                                                                             <?php echo form_close() ?>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -179,7 +179,7 @@
 
                                                                         <a href="<?php echo base_url('dashboard/deleteProduct/' . $key->id_product) ?>" class="btn btn-danger"><i class="zmdi zmdi-delete"></i> Ya, Hapus</a>
 
-                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                                                                     </div>
                                                                 </div>
                                                             </div>

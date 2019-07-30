@@ -46,7 +46,7 @@
                                     <?php echo form_close() ?>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kembali</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                 </div>
                             </div>
                         </div>
@@ -117,12 +117,12 @@
 
                                                         <div class="form-group">
                                                             <div class="modal-footer">
-                                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Save changes</button>
+                                                                <button type="submit" name="submit" class="btn btn-primary" value="Simpan Data">Simpan Perubahan</button>
                                                             </div>
                                                             <?php echo form_close() ?>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,7 +148,7 @@
 
                                                         <a href="<?php echo base_url('dashboard/deleteProgram/' . $dt->id_blog) ?>" class="btn btn-danger"><i class="zmdi zmdi-delete"></i> Ya, Hapus</a>
 
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                                                     </div>
                                                 </div>
                                             </div>
