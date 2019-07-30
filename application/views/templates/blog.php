@@ -14,7 +14,7 @@
                 <?php foreach ($blog->result() as $b) : ?>
                     <!-- Blog Post -->
                     <div class="card mb-5">
-                        <img class="card-img-top" src="<?php echo base_url('assets/images/' . $b->image) ?>" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo base_url('assets/upload/image/' . $b->image) ?>" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title"><?php echo $b->name; ?></h2>
                             <p class="card-text"><?php echo limit_words($b->Description, 30) . '...' ?></p>
