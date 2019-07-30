@@ -14,9 +14,16 @@ class Blog extends CI_Controller
     public function index()
     {
         //konfigurasi pagination
+        $jum = $this->m_blog->berita();
+        $page = $this->uri->segment(3);
+        if (!$page) :
+            $offset = 0;
+        else :
+            $offset = $page;
+        endif;
         $config['base_url'] = site_url('Blog/index'); //site url
-        $config['total_rows'] = $this->db->count_all('tbl_blog'); //total row
-        $config['per_page'] = 2;  //show record per halaman
+        $config['total_rows'] = $jum->num_rows(); //total row
+        $limit = $config['per_page'] = 3;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
@@ -45,7 +52,7 @@ class Blog extends CI_Controller
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
         //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
-        $data['blog'] = $this->m_blog->blog($config["per_page"], $data['page']);
+        $data['blog'] = $this->m_blog->blog_perpage($offset, $limit);
         $data['pagination'] = $this->pagination->create_links();
         $data['title'] = "Blog";
 
@@ -57,10 +64,12 @@ class Blog extends CI_Controller
 
     public function post()
     {
+        $kode = $this->uri->segment(3);
+        $data['post'] = $this->m_blog->get_blog($kode);
         $data['title'] = "Blog";
         $data['active'] = "";
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/post');
+        $this->load->view('templates/post', $data);
         $this->load->view('templates/footer');
     }
 }
