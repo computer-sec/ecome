@@ -36,4 +36,23 @@ class Mod_Product extends CI_Model
 		$this->db->where('id_product', $id_product);
 		$this->db->update('tbl_product', $data);
 	}
+
+	//public function batasan()
+	//{
+	//	$this->db->select('*');
+	//	$this->db->from('tbl_product');	
+	//	$this->db->limit('0','3');
+	//}
+
+	public function batasan()
+    {
+        $hsl = $this->db->query("SELECT * FROM `tbl_product` LIMIT 0, 3");
+        return $hsl;
+    }
+
+    function get_produk($kode)
+    {
+        $hsl = $this->db->query("SELECT * FROM tbl_product where id_product='$kode'");
+        return $hsl;
+    }
 }

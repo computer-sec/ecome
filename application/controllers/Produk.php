@@ -25,8 +25,10 @@ class Produk extends CI_Controller
     {
         $data['title'] = "Produk";
         $data['active'] = "";
+        $kode = $this->uri->segment(3);
+        $data['barang'] = $this->Mod_Product->get_produk($kode);
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/item_produk');
+        $this->load->view('templates/item_produk', $data);
         $this->load->view('templates/footer');
     }
 }

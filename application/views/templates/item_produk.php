@@ -2,12 +2,14 @@
 <div class="container">
 
     <div class="row">
+    <?php $no = 1;
+    foreach ($barang->result() as $p) { ?>
         <div class="col-lg">
             <div class="card mt-4 mb-4">
-                <img class="card-img-top img-fluid" src="<?php echo base_url('assets/'); ?>images/banner-05.jpg" alt="">
+                <img class="card-img-top img-fluid" src="<?php echo base_url('assets/upload/image/'.$p->image); ?>" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Product Name</h3>
-                    <h4>$24.99</h4>
+                    <h3 class="card-title"><?php echo $p->name; ?></h3>
+                    <h4><?php echo $p->price; ?></h4>
                 </div>
             </div>
             <!-- /.card -->
@@ -18,14 +20,13 @@
                     Product Detail
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                     <?php echo $p->keterangan; ?>
                     <hr>
                     <a href="<?= base_url('home/contact'); ?>" class="btn btn-success">Pesan</a>
                 </div>
             </div>
         </div>
-
+    <?php } ?>    
     </div>
 
 </div>

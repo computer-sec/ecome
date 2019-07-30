@@ -30,6 +30,7 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data['produk'] = $this->Mod_Product->getAll();
+		$data['batas'] = $this->Mod_Product->batasan();
 		$data['blog'] = $this->m_blog->berita();
 		$data['title'] = "Home";
 		$data['active'] = "";

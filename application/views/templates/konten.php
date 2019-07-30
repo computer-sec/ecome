@@ -65,8 +65,7 @@
 		</div>
 		<div class="row">
 			<?php $no = 1;
-     			foreach ($produk->result() as $p) { ?>
-			
+     			foreach ($batas->result() as $p) { ?>
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 
 				<!-- block1 -->
@@ -76,7 +75,7 @@
 
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
-						<a href="<?php echo base_url('Produk/item'); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+						<a href="<?php echo base_url('Produk/item/'. $p->id_product); ?>" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 							<?php echo $p->name; ?>
 						</a>
 					</div>	
