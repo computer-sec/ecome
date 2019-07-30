@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <!-- Page Content -->
+=======
+<!-- Page Content -->
+>>>>>>> 41cd577cb19af67b4c498b4c7ded1d32455a2c50
     <div class="container">
         <?php
         function limit_words($string, $word_limit)
