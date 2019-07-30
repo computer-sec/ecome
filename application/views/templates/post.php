@@ -26,7 +26,7 @@ $b = $post->row_array();
             <hr>
 
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="<?php echo base_url() . 'assets/images/' . $b['image']; ?>" alt="">
+            <img class="img-fluid rounded" src="<?php echo base_url() . 'assets/upload/image/' . $b['image']; ?>" alt="">
 
             <hr>
 
