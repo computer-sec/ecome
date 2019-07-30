@@ -24,11 +24,13 @@ class Home extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Mod_Product');
+		$this->load->model('m_blog');
 	}
 
 	public function index()
 	{
 		$data['produk'] = $this->Mod_Product->getAll();
+		$data['blog'] = $this->m_blog->berita();
 		$data['title'] = "Home";
 		$data['active'] = "";
 		$this->load->view('templates/header', $data);
