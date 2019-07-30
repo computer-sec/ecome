@@ -9,9 +9,9 @@ class m_blog extends CI_Model
         return $query;
     }
 
-    public function get_blog($name)
+    public function get_blog($kode)
     {
-        $hsl = $this->db->query("SELECT * FROM tbl_blog where name='$name'");
+        $hsl = $this->db->query("SELECT * FROM tbl_blog where id_blog='$kode'");
         return $hsl;
     }
     function blog_perpage($offset, $limit)

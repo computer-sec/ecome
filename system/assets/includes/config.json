@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 {
     "MAIL_HOST": "lebach.tk@gmail.com",
     "MAIL_TITLE": "[] Contact Form Message"
+=======
+{
+    "MAIL_HOST": "lebach.tk@gmail.com",
+    "MAIL_TITLE": "[] Contact Form Message"
+>>>>>>> 41cd577cb19af67b4c498b4c7ded1d32455a2c50
 }
