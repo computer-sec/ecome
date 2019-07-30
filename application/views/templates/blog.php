@@ -1,4 +1,4 @@
-<!-- Page Content -->
+ <!-- Page Content -->
     <div class="container">
         <?php
         function limit_words($string, $word_limit)
